@@ -1,0 +1,64 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalzorValami.Server", "Server\BalzorValami.Server.csproj", "{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalzorValami.Client", "Client\BalzorValami.Client.csproj", "{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalzorValami.Shared", "Shared\BalzorValami.Shared.csproj", "{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|x64.Build.0 = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|x64.ActiveCfg = Release|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|x64.Build.0 = Release|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{8027AED8-66A1-4154-8F25-5CFBE6FA18E9}.Release|x86.Build.0 = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|x64.Build.0 = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Debug|x86.Build.0 = Debug|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|x64.ActiveCfg = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|x64.Build.0 = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|x86.ActiveCfg = Release|Any CPU
+		{DAE1AFBC-EE2D-4231-8294-DCBB1B7A1DD7}.Release|x86.Build.0 = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|x64.Build.0 = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|x64.ActiveCfg = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|x64.Build.0 = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B7813E1-E93B-4439-9419-A0AA28EE1D5F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E96A4786-6A07-4E29-BABF-405F641E35D8}
+	EndGlobalSection
+EndGlobal

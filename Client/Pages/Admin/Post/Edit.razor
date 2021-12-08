@@ -1,0 +1,55 @@
+@page "/admin/post/edit"
+@using BalzorValami.Shared.Admin
+@inject HttpClient httpClient
+
+<h1 class="my-10 text-8 font-bold">
+    Új poszt
+</h1>
+
+<EditForm Model="@post" OnValidSubmit="@ValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label for="author" class="block">
+            Szerző
+        </label>
+        <InputSelect id="author" @bind-Value="post.AuthorId">
+            <option>Válassz</option>
+            @foreach (var user in users)
+            {
+                <option value="@user.Id">@user.Name</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div>
+        <label for="title" class="block">
+            Cím
+        </label>
+        <InputText class="rounded-md" id="title" @bind-Value="post.Title" />
+    </div>
+    <div class="mt-5 rounded-md">
+        <label for="body" class="block">
+            Szöveg
+        </label>
+        <InputTextArea class="rounded-md" id="body" @bind-Value="post.Body" />
+    </div>
+
+    <button type="submit" class="px-4 py-1 text-white font-bold bg-blue-600 rounded-md mt-5 hover:bg-blue-900">
+        Save
+    </button>
+</EditForm>
+
+@code {
+    private Post post = new();
+    private IEnumerable<User> users = Array.Empty<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await httpClient.GetFromJsonAsync<IEnumerable<User>>("api/admin/Post/Edit");
+    }
+
+    private async Task ValidSubmit() => await httpClient
+        .PostAsJsonAsync<Post>("api/admin/Post/Store", post);
+}

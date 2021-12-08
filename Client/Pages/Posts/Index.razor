@@ -1,0 +1,37 @@
+@page "/post"
+@using BalzorValami.Client.Shared.Templates
+@using BalzorValami.Client.Shared.Molecules
+@using BalzorValami.Shared.Admin
+@inject HttpClient httpClient
+
+<PostLayout>
+    <Main>
+        <div class="space-y-3">
+            @if (posts != null)
+            {
+                @foreach (var post in posts)
+                {
+                    <BalzorValami.Client.Shared.Molecules.Post AuthorName="@post.AuthorName" Hash="@post.Hash">
+                        <NavLink href="@("post/" + post.Id)">
+                            @post.Title
+                        </NavLink>
+                    </BalzorValami.Client.Shared.Molecules.Post>
+                }
+            }
+        </div>
+    </Main>
+    <Aside>
+        <div class="">
+            <img src="/images/meme.jpg" alt="">
+        </div>
+    </Aside>
+</PostLayout>
+
+@code {
+    private IEnumerable<ExistingPost>? posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await httpClient.GetFromJsonAsync<IEnumerable<ExistingPost>>("api/PostFrontend/Index");
+    }
+}

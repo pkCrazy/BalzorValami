@@ -1,0 +1,30 @@
+@page "/post/{Id:int}"
+@inject HttpClient httpClient
+@using BalzorValami.Shared
+@using BalzorValami.Client.Shared.Templates
+
+<PostLayout>
+    <Main>
+        @if (post != null)
+        {
+            <h1 class="mb-8">
+                @post.Title
+            </h1>
+
+            <p>
+                @post.Body
+            </p>
+        }
+    </Main>
+</PostLayout>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private ConcretePost? post;
+
+    protected override async Task OnInitializedAsync()
+    {
+        post = await httpClient.GetFromJsonAsync<ConcretePost>($"api/PostFrontend/Show/{Id}");
+    }
+}

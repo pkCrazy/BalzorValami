@@ -1,0 +1,19 @@
+<div class="flex flex-col md:flex-row gap-x-5 px-2.5 sm:p-0 @Class">
+    <main class="w-full md:w-1/2">
+        @Main
+    </main>
+    <aside class="w-full md:w-1/2">
+        @Aside
+    </aside>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment Main { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment Aside { get; set; } = null!;
+
+    [Parameter]
+    public string? Class { get; set; }
+}

@@ -1,0 +1,24 @@
+@using BalzorValami.Client.Shared.Atoms
+
+<div class="flex justify-between items-center border-b border-black pb-1">
+    <div>
+        @ChildContent
+    </div>
+    <div class="flex items-center">
+        <Gravatar Hash="@Hash" />
+        <div class="ml-2">
+            @AuthorName
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string AuthorName { get; set; }
+
+    [Parameter]
+    public string Hash { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

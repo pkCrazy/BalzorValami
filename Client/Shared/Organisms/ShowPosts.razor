@@ -1,0 +1,25 @@
+@using BalzorValami.Client.Shared.Molecules
+@using BalzorValami.Shared.Admin
+@inject HttpClient httpClient
+
+@if (posts != null)
+{
+    @foreach (var post in posts)
+    {
+        <Post AuthorName="@post.AuthorName">
+            @post.Title
+        </Post>
+    }
+}
+
+@code {
+    private IEnumerable<ExistingPost>? posts;
+
+    [Parameter]
+    public string Href { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        posts = await httpClient.GetFromJsonAsync<IEnumerable<ExistingPost>>("api/admin/Post/Index");
+    }
+}
